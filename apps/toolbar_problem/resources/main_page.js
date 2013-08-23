@@ -13,11 +13,11 @@ ToolbarProblem.mainPage = SC.Page.design({
     mainPane: SC.MainPane.design({
         childViews: ['toolbarView'],
         
-        toolbarView: SC.ToolbarView.extend({
+        toolbarView: SC.View.design({
             layout: { height: 40 },
             childViews: ['menu1', 'menu2'],
 
-            menu1: SC.PopupButtonView.extend({
+            menu1: SC.PopupButtonView.design({
                 title: "My Menu1",
                 layout: {left: 0, width: 100},
                 menu: SC.MenuPane.create({
@@ -29,7 +29,7 @@ ToolbarProblem.mainPage = SC.Page.design({
                 })
             }),
 
-            menu2: SC.PopupButtonView.extend({
+            menu2: SC.PopupButtonView.design({
                 title: "My Menu2",
                 layout: {left: 100, width: 100},
                 menu: SC.MenuPane.create({
